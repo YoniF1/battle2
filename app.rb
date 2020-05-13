@@ -1,14 +1,23 @@
 require 'sinatra/base'
+require 'capybara'
+
 
 class Battle < Sinatra::Base
+  enable :sessions
 
   get '/' do
     erb :index
   end
 
   post '/names' do
-    @playerone = params[:playerone] 
-    @playertwo = params[:playertwo]
+    session[:playerone]= params[:playerone]
+    session[:playertwo]= params[:playertwo]
+    redirect '/play'
+  end
+
+  get '/play' do
+    @playerone = session[:playerone]
+    @playertwo = session[:playertwo]
     erb :play
   end
 
