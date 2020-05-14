@@ -21,5 +21,9 @@ class Battle < Sinatra::Base
     erb :play
   end
 
+  get '/confirmation' do
+    erb :confirmation
+  end
+
   run! if app_file == $0
 end
