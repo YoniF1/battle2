@@ -2,4 +2,6 @@
 <br>
 <%= "#{@playertwo} Hitpoints: 60" %>
 <br>
-<button type="button" value="Attack" action="/confirmation">Attack</button>
+<form action="/confirmation" method="get">
+  <input type="submit" value="Attack">
+</form>

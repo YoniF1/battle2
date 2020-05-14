@@ -1,4 +1,4 @@
-require "../spec_helper"
+require 'spec_helper.rb'
 
 feature 'Testing hitpoint display' do
   scenario 'Can display player 2 hitpoints' do

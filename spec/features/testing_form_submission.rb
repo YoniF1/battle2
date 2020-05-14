@@ -1,4 +1,4 @@
-require "../spec_helper"
+require 'spec_helper.rb'
 
 feature 'Testing form submission' do
   scenario 'Can submit a form with player names and see them' do
